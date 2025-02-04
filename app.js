@@ -60,3 +60,34 @@ function isCharAVowel(char) {
 }
 
 console.log('Exercise 3 Result:', isCharAVowel("ae")); 
+
+/*
+Exercise 4: generateEmail()
+
+Create a function named generateEmail. It should take two strings: 
+a name and a domain. It should return a simple email address.
+
+Example: generateEmail('johnsmith', 'example.com') 
+should return 'johnsmith@example.com'.
+
+Complete the exercise in the space below:
+*/
+
+function generateEmail(name, domain) {
+    const nameValidChars = /^[a-zA-Z0-9._%+-]+$/;
+    const domainValidChars = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    //Test if the name contains invalid characters
+    if (!nameValidChars.test(name)) {
+    return 'Invalid input: The name part of the email contains invalid characters.';
+    }
+  
+    //Test if the domain is invalid
+    if (!domainValidChars.test(domain)) {
+    return 'Invalid input: The domain part of the email is invalid.';
+    }
+
+    return `${name}@${domain}`;
+}
+
+console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
