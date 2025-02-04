@@ -207,7 +207,7 @@ Complete the exercise in the space below:
 
 function basicCalculator(num1, num2, operation) {
     //Do validation here, insure the two inputs are valid
-    
+
     if(operation === 'add') {
         return num1 + num2;
     } else if(operation === 'subtract') {
@@ -226,3 +226,37 @@ function basicCalculator(num1, num2, operation) {
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
+// ################# Level Up exercises #################
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade(score) {
+    // validate the score here. score must be a number, and score must be >= 0 and <= 100.
+    
+    if(score >= 90) {
+        return 'A';
+    } else if(score >= 80) {
+        return 'B';
+    } else if(score >= 70) {
+        return 'C';
+    } else if(score >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+console.log('Exercise 10 Result:', calculateGrade(79));
