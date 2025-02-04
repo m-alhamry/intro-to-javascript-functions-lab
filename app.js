@@ -279,7 +279,7 @@ Complete the exercise in the space below:
 
 function createUsername(firstName, lastName) {
     // validate the inputs here.
-    
+
     firstName = firstName.trim(); 
     lastName = lastName.trim();
     const totalLength = firstName.length + lastName.length;
@@ -290,3 +290,17 @@ function createUsername(firstName, lastName) {
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs(...arguments) {
+    return arguments.length;
+}
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
