@@ -206,6 +206,8 @@ Complete the exercise in the space below:
 */
 
 function basicCalculator(num1, num2, operation) {
+    //Do validation here, insure the two inputs are valid
+    
     if(operation === 'add') {
         return num1 + num2;
     } else if(operation === 'subtract') {
