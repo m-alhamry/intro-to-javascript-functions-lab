@@ -158,3 +158,33 @@ function calculateTip(billAmount, tipPercentage) {
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(temp, scale) {
+    //Do validation here, insure the two inputs are valid
+
+    if (scale === 'C') {
+        // Convert Celsius to Fahrenheit
+        return (temp * 9/5) + 32;
+    } else if (scale === 'F') {
+        // Convert Fahrenheit to Celsius
+        return (temp - 32) * 5/9;
+    } else {
+        return "Please provide a valid scale ('C' for Celsius or 'F' for Fahrenheit).";
+    }
+}
+
+console.log('Exercise 8 Result:', convertTemperature(32, "K"));
