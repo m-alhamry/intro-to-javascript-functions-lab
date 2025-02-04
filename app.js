@@ -10,12 +10,12 @@ Exercise 1 has been completed for you:
 
 const maxOfTwoNumbers = (x, y) => {
     if (x >= y) {
-      return x;
+        return x;
     } else {
-      return y;
+        return y;
     }
 }
-  
+
 console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
 
 /*
@@ -30,10 +30,10 @@ Complete the exercise in the space below:
 */
 
 function isAdult(age) {
-    if (typeof(age) !== 'number' || isNaN(age) || age < 0) {
+    if (typeof (age) !== 'number' || isNaN(age) || age < 0) {
         return 'Invalid input: Please provide a valid non-negative number.';
     }
-    return age >= 18? "Adult": "Minor";
+    return age >= 18 ? "Adult" : "Minor";
 }
 
 console.log('Exercise 2 Result:', isAdult(17.9));
@@ -59,7 +59,7 @@ function isCharAVowel(char) {
     return vowels.includes(char);
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("ae")); 
+console.log('Exercise 3 Result:', isCharAVowel("ae"));
 
 /*
 Exercise 4: generateEmail()
@@ -79,12 +79,12 @@ function generateEmail(name, domain) {
 
     //Test if the name contains invalid characters
     if (!nameValidChars.test(name)) {
-    return 'Invalid input: The name part of the email contains invalid characters.';
+        return 'Invalid input: The name part of the email contains invalid characters.';
     }
-  
+
     //Test if the domain is invalid
     if (!domainValidChars.test(domain)) {
-    return 'Invalid input: The domain part of the email is invalid.';
+        return 'Invalid input: The domain part of the email is invalid.';
     }
 
     return `${name}@${domain}`;
@@ -115,8 +115,27 @@ function greetUser(name, timeOfDay) {
     if (!times.includes(timeOfDay)) {
         return 'Invalid input: Time of day must be "morning", "afternoon", or "evening".';
     }
-    
+
     return `Good ${timeOfDay}, ${name}!`;
 }
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
+
+/*
+Exercise 6: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers 
+and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+function maxOfThree(num1, num2, num3) {
+    //Do validation here, insure all three inputs are valid number
+
+    return Math.max(num1, num2, num3);
+}
+
+console.log('Exercise 6 Result:', maxOfThree(15, 20, 81));
