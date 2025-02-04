@@ -14,6 +14,26 @@ const maxOfTwoNumbers = (x, y) => {
     } else {
       return y;
     }
-  }
+}
   
-  console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+
+/*
+Exercise 2: isAdult()
+
+Write a function named isAdult. It should take an age (number) 
+and return 'Adult' if the age is 18 or over and 'Minor' otherwise.
+
+Example: isAdult(21) should return 'Adult'.
+
+Complete the exercise in the space below:
+*/
+
+function isAdult(age) {
+    if (typeof(age) !== 'number' || isNaN(age) || age < 0) {
+        return 'Invalid input: Please provide a valid non-negative number.';
+    }
+    return age >= 18? "Adult": "Minor";
+}
+
+console.log('Exercise 2 Result:', isAdult(17.9));
